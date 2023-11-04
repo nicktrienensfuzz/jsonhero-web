@@ -21,7 +21,7 @@ export function CodeViewer({ code, lang }: { code: string; lang?: "json" }) {
     container: editor.current,
     extensions,
     value: code,
-    editable: false,
+    editable: true,
     contentEditable: false,
     autoFocus: false,
     basicSetup: false,

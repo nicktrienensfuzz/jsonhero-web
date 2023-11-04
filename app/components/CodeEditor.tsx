@@ -31,7 +31,7 @@ type CodeEditorDefaultProps = Required<
 
 const defaultProps: CodeEditorDefaultProps = {
   language: "json",
-  readOnly: true,
+  readOnly: false,
   selection: { start: 0, end: 0 },
 };
 
@@ -53,8 +53,8 @@ export function CodeEditor(opts: CodeEditorProps) {
   const { setContainer, view, state } = useCodeMirror({
     container: editor.current,
     extensions,
-    editable: !readOnly,
-    contentEditable: !readOnly,
+    editable: true,
+    contentEditable: true,
     value: content,
     autoFocus: false,
     theme: theme === "light" ? lightTheme() : darkTheme(),
